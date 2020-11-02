@@ -11,8 +11,9 @@ public class Search {
 
         int[] numbers = new int[numberCount];
 
-        System.out.println("Enter numbers: ");
-        for (int index = 0; index < numbers.length; index++) {
+        System.out.print("Enter numbers: ");
+        for (int index = 0; index < numbers.length; index++) 
+        {
             numbers[index] = input.nextInt();
         }
 
@@ -20,7 +21,13 @@ public class Search {
         int number = input.nextInt();
 
         int numberIndex = -1;
-        // Search for number in numbers
+        for(int index = 0; index < numbers.length; index++)
+        {
+          if(number == numbers[index])
+          {
+            numberIndex = index;
+          }
+        }
 
         System.out.println("Number index: " + numberIndex);
     }
